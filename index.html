@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-transform: capitalize;
+        text-align: center;
+
+       
+    }
+    
+    button{
+        width: 200px;
+        background-color: rgb(100, 204, 204);
+        padding: 10px;
+        color: black;
+        border: none;
+        margin-top:3% ;
+        font-size: 20px;
+        cursor: pointer;
+        margin-bottom: 3%;
+    }
+
+    .cal{
+        border: 2px solid black;
+        background-color: antiquewhite;
+        padding: 20px;
+        height: auto;
+    }
+    label,input{
+        font-size: 35px;
+        display: flex;
+        justify-content: space-around;      
+    }
+</style>
+</head>
+<body>
+<div class="main">
+
+<h1> percentage calculator</h1>
+
+<div class="cal">
+
+    <label for="total marks">total marks</label>
+    <input type="number" name="total marks" id="totall">
+
+    <br>
+
+    <label for="getting marks">getting marks</label>
+    <input type="number" name="getting marks" id="getting">
+
+
+    <br>
+
+    <button onclick="fun()">get percentage</button>
+
+    <h1 id="ans"></h1>
+
+
+
+</div>
+
+
+</div>
+
+
+    <script>
+        
+        function fun(){
+            
+             let totall=(document.getElementById("totall").value)
+             let getting=(document.getElementById("getting").value)
+
+            let marks=(getting/totall)*100;
+
+            let show =marks.toFixed(2)
+            document.getElementById("ans").innerHTML=show+"%"
+        }
+    </script>
+
+
+</body>
+</html>
